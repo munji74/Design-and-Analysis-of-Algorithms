@@ -6,14 +6,18 @@ Quick Sort is a highly efficient and widely used divide-and-conquer sorting algo
 
 
 Sample code
+
 def quick_sort(arr):
+    
     if len(arr) <= 1:
         return arr
+    
     pivot = arr[len(arr) // 2]
     left = [x for x in arr if x < pivot]
     middle = [x for x in arr if x == pivot]
     right = [x for x in arr if x > pivot]
     return quick_sort(left) + middle + quick_sort(right)
+
 Analysis:
 Average-case time complexity: O(n log n)
 Worst-case time complexity: O(n^2)
@@ -25,16 +29,21 @@ Counting Sort is a non-comparative, integer-based sorting algorithm with a time 
 
 
 Sample code
+
 def counting_sort(arr):
+   
     max_val = max(arr)
     min_val = min(arr)
+    
     count_array = [0] * (max_val - min_val + 1)
         for num in arr:
         count_array[num - min_val] += 1
     sorted_array = []
+    
     for i, count in enumerate(count_array):
         sorted_array.extend([i + min_val] * count)
         return sorted_array
+
 Analysis
 Time complexity: O(n + k), where n is the number of elements and k is the range of input values. Space complexity: O(n + k) for the counting array.
 

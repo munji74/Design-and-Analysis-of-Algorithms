@@ -54,7 +54,9 @@ Heap Sort is a comparison-based sorting algorithm known for its average and wors
 ![heap](https://github.com/munji74/Design-and-Analysis-of-Algorithms/assets/108124055/756ff7d6-5760-42f2-88a9-164d519ea6d1)
 
 
-Sample cod def heapify(arr, n, i):
+Sample code
+    
+def heapify(arr, n, i):
     largest = i
     left = 2 * i + 1
     right = 2 * i + 2

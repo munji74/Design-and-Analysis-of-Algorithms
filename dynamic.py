@@ -1,9 +1,9 @@
 
 
 def minCoins(coins, finalAmount):
-    #list to store the minimum number of coins for each amount from 0 to the target amount.
+    #list to store the minimum number of coins for each amount from 0 to the final amount.
     
-    list = [float('inf')] * (finalAmount + 1)
+    list = [float('inf')] * (finalAmount + 1) #used to store and update minimum values as the algorithm moves on
     list[0] = 0 #set the value at the first index of the list to 0
 
     
